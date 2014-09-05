@@ -1,11 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#game-container {
+  width: 100%;
+}
+
 .workspace {
-  background: url(../images/bg-temp.png) no-repeat top left;
+  background: url("../svg/desk.svg") no-repeat center center;
+  background-color: #E6E6E6;
+  height: 500px;
+  position: relative;
 }
 
 .worker {
   width: 100px;
   height: 100px;
-  background-color: green;
+  background: url("../svg/chair.svg") no-repeat center center;
+  background-size: 100px;
+  position: absolute;
+  top: 25%;
+  left: 30%;
 }
 
 .destroy {
@@ -16,18 +39,54 @@
   background-color: yellow;
 }
 
-.supply {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: transform .1s ease-in;
+.kitchen {
+  background-color: #D30000;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
 }
 
-.coffee { background-color: red; }
-.pie { background-color: orange; }
-.brownie { background-color: green; }
+.betty {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background: url("../svg/betty-head.svg") no-repeat center center;
+  background-size: 100px;
+}
 
+.supplies {
+  display: inline-block;
+  width: calc(100% - 210px);
+  text-align: center;
+}
 
+.supply {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform .1s ease-in;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.coffee {
+  background-image: url("../svg/coffee.svg");
+}
+.pie {
+  background-image: url("../svg/pie.svg");
+}
+.brownie {
+  background-image: url("../svg/brownie.svg");
+}
+
+.time {
+  border-radius: 50%;
+  background-color: #FFF;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
 
 .ui-draggable-dragging {
  box-shadow: 0 0 5px rgba(0,0,0,0.2);
